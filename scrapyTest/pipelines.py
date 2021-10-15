@@ -27,7 +27,6 @@ class savefileTongscrapyPipeline(object):
         self.csvwriter.writerow(['游戏名字', '游戏类型', '游戏图片', '游戏地址'])
     def process_item(self, item, spider):
         self.csvwriter.writerow([item["游戏名字"], item["游戏类型"], item["游戏图片"], item["游戏地址"]])
-        print(';;;;;;;;;;;;;;;;;;')
         return item
     def close_spider(self, spider):
         self.file.close()
